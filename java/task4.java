@@ -23,7 +23,10 @@ public class task4 {
         };
 
         
-
+        Arrays.sort(people, Comparator
+            .comparing((Person p) -> p.last)
+            .thenComparing(Comparator.comparingInt((Person p) -> p.age).reversed())
+            .thenComparing(p -> p.first));
 
         for (Person p : people) System.out.println(p);
     }

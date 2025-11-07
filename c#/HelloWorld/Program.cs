@@ -6,7 +6,10 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
+            string filePath = "output.txt";
+            string content = "Hello World!";
+            File.WriteAllText(filePath, content);
         }
     }
 }

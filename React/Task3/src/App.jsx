@@ -24,8 +24,11 @@ function App() {
   const [people, setPeople] = useState(randomizedPeople);
 
   const handleSort = () => {
-
+    const sorted = [...people].sort((a, b) =>
+      a.lastname.localeCompare(b.lastname)
+    );
     setPeople(sorted);
+    console.log(sorted)
   };
 
   return (
